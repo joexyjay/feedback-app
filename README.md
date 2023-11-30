@@ -1,8 +1,16 @@
-# React + Vite
+React FeedBack App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+It allows users to add, update and delete feedback. It uses a mock REST api with json-server.
 
-Currently, two official plugins are available:
+This project goes over all of the fundamentals of React including...
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Components
+JSX
+Props (proptypes, defaultprops, etc)
+State (Component & App Level)
+Styling
+Handling Events
+Lists & Keys
+Forms
+Context API
+HTTP Requests

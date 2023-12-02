@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+import propTypes from "prop-types"
 import FeedbackItem from "./FeedbackItem"
 function FeedbackList({ feedback }) {
     if(!feedback || feedback.length == 0) return (<div>No feedback to display</div>)
@@ -10,4 +10,8 @@ function FeedbackList({ feedback }) {
     </div>
   )
 }
+FeedbackList.propTypes = {
+  feedback: propTypes.array.isRequired,
+}
+
 export default FeedbackList

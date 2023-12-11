@@ -8,6 +8,7 @@ import FeedbackForm from "./components/FeedbackForm"
 import FeedbackData from "./data/FeedbackData"
 import AboutIconLink from "./components/AboutIconLink"
 import AboutPage from "./pages/AboutPage"
+import { FeedbackProvider } from "./context/FeedbackContext"
 function App() {
   const [feedback, setFeedback] = useState(FeedbackData)
 
@@ -22,6 +23,7 @@ function App() {
   }
 
   return (
+    <FeedbackProvider>
     <Router>
       <Header />
       <div className="container">
@@ -30,8 +32,8 @@ function App() {
                   element={
                   <>
                     <FeedbackForm handleAdd={addFeedback}/>
-                    <FeedbackStats feedback={feedback} />
-                    <FeedbackList feedback={feedback} handleDelete={deleteFeedback}/>
+                    <FeedbackStats />
+                    <FeedbackList  handleDelete={deleteFeedback}/>
                   </>
                 }>
           </Route >
@@ -41,6 +43,7 @@ function App() {
       </div>
       <AboutIconLink />
     </Router>
+    </FeedbackProvider> 
   )
 }
 
